@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-PH">
+  <Title Text="Dashboard" />
+  <DataConnections>
+    <DataConnection Name="Connection" ConnectionString="XpoProvider=MySql;&#xD;&#xA;Server=192.168.254.13;&#xD;&#xA;User ID=dolero6;&#xD;&#xA;Password=doleregion6;&#xD;&#xA;Database=dbdb;&#xD;&#xA;Persist Security Info= true;&#xD;&#xA;Port='3306';&#xD;&#xA;Charset=utf8;" />
+  </DataConnections>
+  <DataSources>
+    <DataSource ComponentName="dataSource1" Name="Data Source 1">
+      <DataProvider DataConnection="Connection" SupportSql="true">
+        <Selection>
+          <Table Name="assessmentlisttable">
+            <Columns>
+              <Column Name="AssessmentID" Alias="AssessmentID" />
+              <Column Name="EstablishmentID" Alias="EstablishmentID" />
+              <Column Name="AssessmentTypeVisit" Alias="AssessmentTypeVisit" />
+              <Column Name="AssessmentStatus" Alias="AssessmentStatus" />
+              <Column Name="AssessmentDate" Alias="AssessmentDate" />
+              <Column Name="AssessmentAuthorityNumber" Alias="AssessmentAuthorityNumber" />
+              <Column Name="AssessmentProvince" Alias="AssessmentProvince" />
+              <Column Name="AssessmentCategory" Alias="AssessmentCategory" />
+              <Column Name="COCStatus" Alias="COCStatus" />
+              <Column Name="AssessmentFindings/Remarks" Alias="AssessmentFindings/Remarks" />
+              <Column Name="AssessmentLLCO" Alias="AssessmentLLCO" />
+            </Columns>
+          </Table>
+          <Table Name="establishmenttable">
+            <References>
+              <Reference Key="EstablishmentID" ParentKey="AssessmentID" ParentTable="assessmentlisttable" />
+            </References>
+            <Columns>
+              <Column Name="EstablishmentID" Alias="establishmenttable_EstablishmentID" />
+              <Column Name="EstablishmentName" Alias="EstablishmentName" />
+              <Column Name="EstablishmentAddress" Alias="EstablishmentAddress" />
+              <Column Name="EstablishmentOwner" Alias="EstablishmentOwner" />
+              <Column Name="NoOfMaleWorkers" Alias="NoOfMaleWorkers" />
+              <Column Name="NoOfFemaleWorkers" Alias="NoOfFemaleWorkers" />
+              <Column Name="Union" Alias="Union" />
+              <Column Name="CBA" Alias="CBA" />
+              <Column Name="EstablishmentType" Alias="EstablishmentType" />
+              <Column Name="NatureOfBusiness" Alias="NatureOfBusiness" />
+            </Columns>
+          </Table>
+        </Selection>
+      </DataProvider>
+    </DataSource>
+  </DataSources>
+  <Items>
+    <Pie ComponentName="pieDashboardItem1" Name="Click to filter by LLCO" DataSource="dataSource1" IgnoreMasterFilters="true" LabelContentType="ArgumentValueAndPercent">
+      <DataItems>
+        <Measure DataMember="AssessmentID" SummaryType="Count" UniqueName="DataItem0" Name="Assessment Count" />
+        <Dimension DataMember="AssessmentLLCO" UniqueName="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+      </Arguments>
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <Values>
+        <Value UniqueName="DataItem0" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartDashboardItem1" Name="Click to Filter Assessment Date" DataSource="dataSource1">
+      <DataItems>
+        <Dimension DataMember="AssessmentLLCO" UniqueName="DataItem4" />
+        <Dimension DataMember="AssessmentDate" SortOrder="Descending" UniqueName="DataItem0" />
+        <Measure DataMember="AssessmentID" SummaryType="Count" UniqueName="DataItem2" />
+        <Dimension DataMember="AssessmentDate" DateTimeGroupInterval="Month" UniqueName="DataItem3" />
+        <Dimension DataMember="AssessmentDate" DateTimeGroupInterval="Quarter" UniqueName="DataItem1" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem4" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem0" />
+        <Argument UniqueName="DataItem1" />
+        <Argument UniqueName="DataItem3" />
+      </Arguments>
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value UniqueName="DataItem2" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <Pie ComponentName="pieDashboardItem2" Name="Assessment Status" DataSource="dataSource1" LabelContentType="ArgumentValueAndPercent">
+      <DataItems>
+        <Measure DataMember="AssessmentID" SummaryType="Count" UniqueName="DataItem0" Name="AssessmentID (Count)" />
+        <Dimension DataMember="AssessmentCategory" UniqueName="DataItem1" />
+        <Dimension DataMember="AssessmentStatus" UniqueName="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension UniqueName="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument UniqueName="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value UniqueName="DataItem0" />
+      </Values>
+    </Pie>
+    <Pivot ComponentName="pivotDashboardItem1" Name="List of Assessed Establishments" DataSource="dataSource1">
+      <DataItems>
+        <Dimension DataMember="AssessmentLLCO" UniqueName="DataItem0" />
+        <Measure DataMember="AssessmentID" SummaryType="Count" UniqueName="DataItem1" Name="AssessmentID (Count)" />
+        <Dimension DataMember="EstablishmentName" UniqueName="DataItem2" />
+        <Dimension DataMember="AssessmentStatus" UniqueName="DataItem3" />
+        <Dimension DataMember="AssessmentCategory" UniqueName="DataItem4" />
+      </DataItems>
+      <Columns>
+        <Column UniqueName="DataItem4" />
+      </Columns>
+      <Rows>
+        <Row UniqueName="DataItem0" />
+        <Row UniqueName="DataItem3" />
+        <Row UniqueName="DataItem2" />
+      </Rows>
+      <Values>
+        <Value UniqueName="DataItem1" />
+      </Values>
+    </Pivot>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup Weight="50.075642965204239">
+        <LayoutItem Weight="49.957228400342174" DashboardItem="pieDashboardItem1" />
+        <LayoutItem Weight="50.042771599657826" DashboardItem="chartDashboardItem1" />
+      </LayoutGroup>
+      <LayoutGroup Weight="49.924357034795761">
+        <LayoutItem Weight="49.957228400342174" DashboardItem="pieDashboardItem2" />
+        <LayoutItem Weight="50.042771599657826" DashboardItem="pivotDashboardItem1" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

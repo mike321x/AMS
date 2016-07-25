@@ -1,0 +1,188 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DXApplication4
+</name>
+</assembly>
+<members>
+<member name="P:DXApplication4.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:DXApplication4.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:DXApplication4.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.accountstableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.assessmentlisttableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.establishmenttableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.logtableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.violationlistDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.violationstableDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.ListOfAssessmentDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.ForCOCIssuanceDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.accountstableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.assessmentlisttableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.establishmenttableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.logtableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.violationlistRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.violationstableRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.ListOfAssessmentRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.ForCOCIssuanceRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.accountstableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.assessmentlisttableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.establishmenttableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.logtableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.violationlistRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.violationstableRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.ListOfAssessmentRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet.ForCOCIssuanceRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSetTableAdapters.accountstableTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSetTableAdapters.assessmentlisttableTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSetTableAdapters.establishmenttableTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSetTableAdapters.logtableTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSetTableAdapters.violationlistTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSetTableAdapters.violationstableTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSetTableAdapters.ListOfAssessmentTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSetTableAdapters.ForCOCIssuanceTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:DXApplication4.dbdbDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(DXApplication4.dbdbDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:DXApplication4.dbdbDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(DXApplication4.dbdbDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:DXApplication4.dbdbDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(DXApplication4.dbdbDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:DXApplication4.dbdbDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:DXApplication4.dbdbDataSetTableAdapters.TableAdapterManager.UpdateAll(DXApplication4.dbdbDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:DXApplication4.dbdbDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+</members>
+</doc>

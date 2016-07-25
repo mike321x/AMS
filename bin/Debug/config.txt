@@ -1,0 +1,10 @@
+1: Server
+localhost
+3: Port
+3306
+5: User ID
+root
+7: Password
+
+9: Database 
+dbdb
