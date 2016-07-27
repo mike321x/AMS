@@ -82,14 +82,17 @@ Public Class Main
     Private Sub ViewEstablishmentDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewEstablishmentDetailsToolStripMenuItem.Click
         Try
 
-       
+            'DataLayoutControl1.DataSource = Globals.table2
         If GridView1.SelectedRowsCount = 1 Then
-            Dim param1 As String = GridView1.GetFocusedRowCellValue("EstablishmentID").ToString
-                loadtable2("select * from establishmenttable where EstablishmentID='" & param1 & "'")
+                Dim param1 As String = GridView1.GetFocusedRowCellValue("EstablishmentID").ToString
+                Dim dt1 As New DataTable
+                Establishment_Detail.DataLayoutControl1.DataSource = custable("select * from establishmenttable where EstablishmentID='" & param1 & "'", dt1)
                 Establishment_Detail.ShowDialog()
-        Else
 
-        End If
+            Else
+
+
+            End If
         Catch ex As Exception
             MsgBox("Please Select only 1 Specific Item to View " & vbNewLine & " " & ex.ToString & "")
         End Try
@@ -142,11 +145,14 @@ Public Class Main
         Try
 
 
-            If GridView1.SelectedRowsCount = 1 Then
+            If GridView2.SelectedRowsCount = 1 Then
                 Dim param1 As String = GridView2.GetFocusedRowCellValue("AssessmentID").ToString
-                loadtable2("select * from assessmentlisttable where AssessmentID='" & param1 & "'")
-                AssessmentForm.ShowDialog()
+                Dim dt As New DataTable
+
+
+                AssessmentForm.DataLayoutControl1.DataSource = custable("select * from assessmentlisttable where AssessmentID='" & param1 & "'", dt)
                 AssessmentForm.display1("select * from violationstable where AssessmentID like '" & param1 & "'")
+                AssessmentForm.ShowDialog()
             Else
 
             End If
@@ -154,4 +160,15 @@ Public Class Main
             MsgBox("Please Select only 1 Specific Item to View " & vbNewLine & " " & ex.ToString & "")
         End Try
     End Sub
+
+  
+    Private Sub UpdateAssessmentStatusToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateAssessmentStatusToolStripMenuItem.Click
+        If GridView2.SelectedRowsCount = 1 Then
+            Dim param1 As String = GridView2.GetFocusedRowCellValue("AssessmentID").ToString
+
+        End If
+    End Sub
+
+  
+
 End Class

@@ -35,6 +35,8 @@ Partial Class Establishment_Detail
         Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ViewAssessmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EstablishmentIDTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.EstablishmentNameTextEdit = New DevExpress.XtraEditors.TextEdit()
         Me.EstablishmentAddressTextEdit = New DevExpress.XtraEditors.TextEdit()
@@ -60,12 +62,11 @@ Partial Class Establishment_Detail
         Me.ItemForNoOfFemaleWorkers = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ViewAssessmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DbdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EstablishmenttableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DataLayoutControl1.SuspendLayout()
+        Me.ContextMenuStrip1.SuspendLayout()
         CType(Me.EstablishmentIDTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EstablishmentNameTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EstablishmentAddressTextEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -91,7 +92,6 @@ Partial Class Establishment_Detail
         CType(Me.ItemForNoOfFemaleWorkers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'DbdbDataSet
@@ -196,6 +196,18 @@ Partial Class Establishment_Detail
         '
         Me.ColumnHeader8.Text = "COC Status"
         Me.ColumnHeader8.Width = 95
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewAssessmentToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(165, 48)
+        '
+        'ViewAssessmentToolStripMenuItem
+        '
+        Me.ViewAssessmentToolStripMenuItem.Name = "ViewAssessmentToolStripMenuItem"
+        Me.ViewAssessmentToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ViewAssessmentToolStripMenuItem.Text = "View Assessment"
         '
         'EstablishmentIDTextEdit
         '
@@ -450,18 +462,6 @@ Partial Class Establishment_Detail
         Me.LayoutControlItem2.TextToControlDistance = 0
         Me.LayoutControlItem2.TextVisible = False
         '
-        'ContextMenuStrip1
-        '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewAssessmentToolStripMenuItem})
-        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(165, 26)
-        '
-        'ViewAssessmentToolStripMenuItem
-        '
-        Me.ViewAssessmentToolStripMenuItem.Name = "ViewAssessmentToolStripMenuItem"
-        Me.ViewAssessmentToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.ViewAssessmentToolStripMenuItem.Text = "View Assessment"
-        '
         'Establishment_Detail
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -474,6 +474,7 @@ Partial Class Establishment_Detail
         CType(Me.EstablishmenttableBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataLayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.DataLayoutControl1.ResumeLayout(False)
+        Me.ContextMenuStrip1.ResumeLayout(False)
         CType(Me.EstablishmentIDTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EstablishmentNameTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EstablishmentAddressTextEdit.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -499,7 +500,6 @@ Partial Class Establishment_Detail
         CType(Me.ItemForNoOfFemaleWorkers, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub

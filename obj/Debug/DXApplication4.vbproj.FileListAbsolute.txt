@@ -16,3 +16,4 @@ C:\Users\SAP\Documents\Visual Studio 2013\Projects\DXApplication4\DXApplication4
 C:\Users\SAP\Documents\Visual Studio 2013\Projects\DXApplication4\DXApplication4\obj\Debug\DXApplication4.pdb
 C:\Users\SAP\documents\visual studio 2013\Projects\DXApplication4\DXApplication4\obj\Debug\DXApplication4.Establishment_Detail.resources
 C:\Users\SAP\documents\visual studio 2013\Projects\DXApplication4\DXApplication4\obj\Debug\DXApplication4.AssessmentForm.resources
+C:\Users\SAP\Documents\Visual Studio 2013\Projects\DXApplication4\DXApplication4\obj\Debug\DXApplication4.AssessmentStatusChange.resources

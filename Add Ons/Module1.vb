@@ -285,6 +285,24 @@ Module Module1
         Return Globals.table2
         Call cls()
     End Function
+
+    Function custable(ByVal sqlsql As String, Dt1 As DataTable)
+        Dim sqladapter As New MySqlDataAdapter
+        Dt1.Rows.Clear()
+        Call open()
+
+        With Globals.sqlcommand
+            .CommandText = sqlsql
+            .Connection = Globals.sqlconnection
+        End With
+
+        With sqladapter
+            .SelectCommand = Globals.sqlcommand
+            .Fill(Dt1)
+        End With
+        Return Dt1
+        Call cls()
+    End Function
     Function savekowt(ByVal s As String)
         Dim a As String
         a = Replace(s, "'", "@,")

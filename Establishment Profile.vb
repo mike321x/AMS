@@ -6,7 +6,7 @@
 
         ' This call is required by the designer.
         InitializeComponent()
-        DataLayoutControl1.DataSource = Globals.table2
+
         ' Add any initialization after the InitializeComponent() call.
         display1("select * from assessmentlisttable where AssessmentID like '" & EstablishmentIDTextEdit.Text & "' ")
     End Sub
@@ -21,6 +21,7 @@
 
     Private Sub Establishment_Detail_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         display1("select * from assessmentlisttable where AssessmentID like '" & EstablishmentIDTextEdit.Text & "' ")
+
     End Sub
 
 
@@ -69,9 +70,13 @@
 
             If ListView1.SelectedItems.Count = 1 Then
                 Dim param1 As String = ListView1.SelectedItems(0).Text
-                loadtable("select * from assessmentlisttable where AssessmentID='" & param1 & "'")
-                AssessmentForm.ShowDialog()
+                Dim dt As New DataTable
+
+
+                AssessmentForm.DataLayoutControl1.DataSource = custable("select * from assessmentlisttable where AssessmentID='" & param1 & "'", dt)
                 AssessmentForm.display1("select * from violationstable where AssessmentID like '" & param1 & "'")
+                AssessmentForm.ShowDialog()
+
             Else
 
             End If
@@ -79,4 +84,6 @@
             MsgBox("Please Select only 1 Specific Item to View " & vbNewLine & " " & ex.ToString & "")
         End Try
     End Sub
+
+
 End Class

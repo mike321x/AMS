@@ -83,6 +83,10 @@ Partial Class Main
         Me.colNatureOfBusiness = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.XtraTabPage2 = New DevExpress.XtraTab.XtraTabPage()
         Me.GridControl2 = New DevExpress.XtraGrid.GridControl()
+        Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ViewAssessmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateAssessmentStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateCOCStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListOfAssessmentBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.GridView2 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.colAssessmentID = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -116,8 +120,6 @@ Partial Class Main
         Me.ListOfAssessmentTableAdapter = New DXApplication4.dbdbDataSetTableAdapters.ListOfAssessmentTableAdapter()
         Me.PopupMenu1 = New DevExpress.XtraBars.PopupMenu(Me.components)
         Me.ForCOCIssuanceTableAdapter = New DXApplication4.dbdbDataSetTableAdapters.ForCOCIssuanceTableAdapter()
-        Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.ViewAssessmentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.ribbonControl, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.appMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ribbonImageCollection, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -132,6 +134,7 @@ Partial Class Main
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.XtraTabPage2.SuspendLayout()
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip2.SuspendLayout()
         CType(Me.ListOfAssessmentBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.XtraTabPage3.SuspendLayout()
@@ -139,7 +142,6 @@ Partial Class Main
         CType(Me.ForCOCIssuanceBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ContextMenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'ribbonControl
@@ -577,6 +579,30 @@ Partial Class Main
         Me.GridControl2.TabIndex = 1
         Me.GridControl2.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView2})
         '
+        'ContextMenuStrip2
+        '
+        Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewAssessmentToolStripMenuItem, Me.UpdateAssessmentStatusToolStripMenuItem, Me.UpdateCOCStatusToolStripMenuItem})
+        Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
+        Me.ContextMenuStrip2.Size = New System.Drawing.Size(213, 70)
+        '
+        'ViewAssessmentToolStripMenuItem
+        '
+        Me.ViewAssessmentToolStripMenuItem.Name = "ViewAssessmentToolStripMenuItem"
+        Me.ViewAssessmentToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.ViewAssessmentToolStripMenuItem.Text = "View Assessment"
+        '
+        'UpdateAssessmentStatusToolStripMenuItem
+        '
+        Me.UpdateAssessmentStatusToolStripMenuItem.Name = "UpdateAssessmentStatusToolStripMenuItem"
+        Me.UpdateAssessmentStatusToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.UpdateAssessmentStatusToolStripMenuItem.Text = "Update Assessment Status"
+        '
+        'UpdateCOCStatusToolStripMenuItem
+        '
+        Me.UpdateCOCStatusToolStripMenuItem.Name = "UpdateCOCStatusToolStripMenuItem"
+        Me.UpdateCOCStatusToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.UpdateCOCStatusToolStripMenuItem.Text = "Update COC Status"
+        '
         'ListOfAssessmentBindingSource
         '
         Me.ListOfAssessmentBindingSource.DataMember = "ListOfAssessment"
@@ -818,18 +844,6 @@ Partial Class Main
         '
         Me.ForCOCIssuanceTableAdapter.ClearBeforeFill = True
         '
-        'ContextMenuStrip2
-        '
-        Me.ContextMenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewAssessmentToolStripMenuItem})
-        Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
-        Me.ContextMenuStrip2.Size = New System.Drawing.Size(165, 48)
-        '
-        'ViewAssessmentToolStripMenuItem
-        '
-        Me.ViewAssessmentToolStripMenuItem.Name = "ViewAssessmentToolStripMenuItem"
-        Me.ViewAssessmentToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
-        Me.ViewAssessmentToolStripMenuItem.Text = "View Assessment"
-        '
         'Main
         '
         Me.AllowFormGlass = DevExpress.Utils.DefaultBoolean.[False]
@@ -858,6 +872,7 @@ Partial Class Main
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.XtraTabPage2.ResumeLayout(False)
         CType(Me.GridControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip2.ResumeLayout(False)
         CType(Me.ListOfAssessmentBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.XtraTabPage3.ResumeLayout(False)
@@ -865,7 +880,6 @@ Partial Class Main
         CType(Me.ForCOCIssuanceBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PopupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ContextMenuStrip2.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -956,5 +970,7 @@ Partial Class Main
     Friend WithEvents BarButtonItem4 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents ContextMenuStrip2 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents ViewAssessmentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UpdateAssessmentStatusToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UpdateCOCStatusToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

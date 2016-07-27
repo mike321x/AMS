@@ -5,7 +5,7 @@
 
         ' This call is required by the designer.
         InitializeComponent()
-        DataLayoutControl1.DataSource = Globals.table
+        'DataLayoutControl1.DataSource = Globals.table2
 
         ' Add any initialization after the InitializeComponent() call.
 
@@ -14,10 +14,7 @@
     Private Sub AssessmentForm_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         Me.Dispose()
     End Sub
-    Private Sub AssessmentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        MsgBox(AssessmentIDSpinEdit.Text)
-    End Sub
 
 
     Sub display1(ss As String)
@@ -53,4 +50,6 @@
     Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
         Me.Dispose()
     End Sub
+
+   
 End Class
