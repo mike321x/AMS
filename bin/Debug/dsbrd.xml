@@ -2,10 +2,10 @@
 <Dashboard CurrencyCulture="en-PH">
   <Title Text="Dashboard" />
   <DataConnections>
-    <DataConnection Name="Connection" ConnectionString="XpoProvider=MySql;&#xD;&#xA;Server=192.168.254.13;&#xD;&#xA;User ID=dolero6;&#xD;&#xA;Password=doleregion6;&#xD;&#xA;Database=dbdb;&#xD;&#xA;Persist Security Info= true;&#xD;&#xA;Port='3306';&#xD;&#xA;Charset=utf8;" />
+    <DataConnection Name="Connection" ConnectionString="XpoProvider=MySql;&#xD;&#xA;Server=localhost;&#xD;&#xA;User ID=root;&#xD;&#xA;Password=;&#xD;&#xA;Database=dbdb;&#xD;&#xA;Persist Security Info= true;&#xD;&#xA;Port='3306';&#xD;&#xA;Charset=utf8;" />
   </DataConnections>
   <DataSources>
-    <DataSource ComponentName="dataSource1" Name="Data Source 1">
+    <DataSource ComponentName="dataSource1" Name="Data Source 1" DataProcessingMode="Client">
       <DataProvider DataConnection="Connection" SupportSql="true">
         <Selection>
           <Table Name="assessmentlisttable">

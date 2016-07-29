@@ -64,6 +64,7 @@ Partial Class NewAssessmentForm
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ComboBoxEdit1 = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.LookUpEdit1 = New DevExpress.XtraEditors.LookUpEdit()
         Me.LayoutControlGroup4 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlGroup5 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem6 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -72,9 +73,8 @@ Partial Class NewAssessmentForm
         Me.LayoutControlItem9 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem3 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem7 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
-        Me.LookUpEdit1 = New DevExpress.XtraEditors.LookUpEdit()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         CType(Me.DataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.DataLayoutControl1.SuspendLayout()
         CType(Me.AssessmentIDSpinEdit.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,6 +109,7 @@ Partial Class NewAssessmentForm
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.LayoutControl1.SuspendLayout()
         CType(Me.ComboBoxEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -118,7 +119,6 @@ Partial Class NewAssessmentForm
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.LookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataLayoutControl1
@@ -191,6 +191,7 @@ Partial Class NewAssessmentForm
         Me.AssessmentTypeVisitComboBoxEdit.Location = New System.Drawing.Point(133, 67)
         Me.AssessmentTypeVisitComboBoxEdit.Name = "AssessmentTypeVisitComboBoxEdit"
         Me.AssessmentTypeVisitComboBoxEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.AssessmentTypeVisitComboBoxEdit.Properties.Items.AddRange(New Object() {"IJA", "JA", "CV"})
         Me.AssessmentTypeVisitComboBoxEdit.Size = New System.Drawing.Size(219, 20)
         Me.AssessmentTypeVisitComboBoxEdit.StyleController = Me.DataLayoutControl1
         Me.AssessmentTypeVisitComboBoxEdit.TabIndex = 6
@@ -201,6 +202,7 @@ Partial Class NewAssessmentForm
         Me.AssessmentStatusComboBoxEdit.Location = New System.Drawing.Point(465, 115)
         Me.AssessmentStatusComboBoxEdit.Name = "AssessmentStatusComboBoxEdit"
         Me.AssessmentStatusComboBoxEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.AssessmentStatusComboBoxEdit.Properties.Items.AddRange(New Object() {"No Violation", "With Violation", "Complied"})
         Me.AssessmentStatusComboBoxEdit.Size = New System.Drawing.Size(219, 20)
         Me.AssessmentStatusComboBoxEdit.StyleController = Me.DataLayoutControl1
         Me.AssessmentStatusComboBoxEdit.TabIndex = 7
@@ -234,6 +236,7 @@ Partial Class NewAssessmentForm
         Me.AssessmentProvinceComboBoxEdit.Location = New System.Drawing.Point(465, 91)
         Me.AssessmentProvinceComboBoxEdit.Name = "AssessmentProvinceComboBoxEdit"
         Me.AssessmentProvinceComboBoxEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.AssessmentProvinceComboBoxEdit.Properties.Items.AddRange(New Object() {"Iloilo", "Capiz", "Antique", "Aklan"})
         Me.AssessmentProvinceComboBoxEdit.Size = New System.Drawing.Size(219, 20)
         Me.AssessmentProvinceComboBoxEdit.StyleController = Me.DataLayoutControl1
         Me.AssessmentProvinceComboBoxEdit.TabIndex = 10
@@ -244,6 +247,7 @@ Partial Class NewAssessmentForm
         Me.AssessmentCategoryComboBoxEdit.Location = New System.Drawing.Point(133, 115)
         Me.AssessmentCategoryComboBoxEdit.Name = "AssessmentCategoryComboBoxEdit"
         Me.AssessmentCategoryComboBoxEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.AssessmentCategoryComboBoxEdit.Properties.Items.AddRange(New Object() {"GLS", "OSHS", "GLS and OSHS"})
         Me.AssessmentCategoryComboBoxEdit.Size = New System.Drawing.Size(219, 20)
         Me.AssessmentCategoryComboBoxEdit.StyleController = Me.DataLayoutControl1
         Me.AssessmentCategoryComboBoxEdit.TabIndex = 11
@@ -254,6 +258,7 @@ Partial Class NewAssessmentForm
         Me.COCStatusComboBoxEdit.Location = New System.Drawing.Point(133, 139)
         Me.COCStatusComboBoxEdit.Name = "COCStatusComboBoxEdit"
         Me.COCStatusComboBoxEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.COCStatusComboBoxEdit.Properties.Items.AddRange(New Object() {"NA", "For Issuance GLS", "For Issuance OSHS", "Printed", "Issued"})
         Me.COCStatusComboBoxEdit.Size = New System.Drawing.Size(551, 20)
         Me.COCStatusComboBoxEdit.StyleController = Me.DataLayoutControl1
         Me.COCStatusComboBoxEdit.TabIndex = 12
@@ -521,6 +526,22 @@ Partial Class NewAssessmentForm
         Me.ComboBoxEdit1.StyleController = Me.LayoutControl1
         Me.ComboBoxEdit1.TabIndex = 5
         '
+        'LookUpEdit1
+        '
+        Me.LookUpEdit1.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ViolationlistBindingSource, "ViolationID", True))
+        Me.LookUpEdit1.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.ViolationlistBindingSource, "ViolationType", True))
+        Me.LookUpEdit1.Location = New System.Drawing.Point(104, 43)
+        Me.LookUpEdit1.Name = "LookUpEdit1"
+        Me.LookUpEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.LookUpEdit1.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ViolationID", "Violation ID", 77, DevExpress.Utils.FormatType.Numeric, "", True, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ViolationName", "Violation Name", 80, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ViolationType", "Violation Type", 77, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
+        Me.LookUpEdit1.Properties.DataSource = Me.ViolationlistBindingSource
+        Me.LookUpEdit1.Properties.DisplayMember = "ViolationName"
+        Me.LookUpEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard
+        Me.LookUpEdit1.Properties.ValueMember = "ViolationID"
+        Me.LookUpEdit1.Size = New System.Drawing.Size(580, 20)
+        Me.LookUpEdit1.StyleController = Me.LayoutControl1
+        Me.LookUpEdit1.TabIndex = 16
+        '
         'LayoutControlGroup4
         '
         Me.LayoutControlGroup4.CustomizationFormText = "LayoutControlGroup4"
@@ -610,10 +631,6 @@ Partial Class NewAssessmentForm
         Me.LayoutControlItem7.TextToControlDistance = 0
         Me.LayoutControlItem7.TextVisible = False
         '
-        'BackgroundWorker1
-        '
-        Me.BackgroundWorker1.WorkerReportsProgress = True
-        '
         'LayoutControlItem2
         '
         Me.LayoutControlItem2.Control = Me.LookUpEdit1
@@ -624,21 +641,9 @@ Partial Class NewAssessmentForm
         Me.LayoutControlItem2.Text = "Violation"
         Me.LayoutControlItem2.TextSize = New System.Drawing.Size(77, 13)
         '
-        'LookUpEdit1
+        'BackgroundWorker1
         '
-        Me.LookUpEdit1.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.ViolationlistBindingSource, "ViolationID", True))
-        Me.LookUpEdit1.DataBindings.Add(New System.Windows.Forms.Binding("Tag", Me.ViolationlistBindingSource, "ViolationType", True))
-        Me.LookUpEdit1.Location = New System.Drawing.Point(104, 43)
-        Me.LookUpEdit1.Name = "LookUpEdit1"
-        Me.LookUpEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.LookUpEdit1.Properties.Columns.AddRange(New DevExpress.XtraEditors.Controls.LookUpColumnInfo() {New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ViolationID", "Violation ID", 77, DevExpress.Utils.FormatType.Numeric, "", True, DevExpress.Utils.HorzAlignment.Far), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ViolationName", "Violation Name", 80, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near), New DevExpress.XtraEditors.Controls.LookUpColumnInfo("ViolationType", "Violation Type", 77, DevExpress.Utils.FormatType.None, "", True, DevExpress.Utils.HorzAlignment.Near)})
-        Me.LookUpEdit1.Properties.DataSource = Me.ViolationlistBindingSource
-        Me.LookUpEdit1.Properties.DisplayMember = "ViolationName"
-        Me.LookUpEdit1.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard
-        Me.LookUpEdit1.Properties.ValueMember = "ViolationID"
-        Me.LookUpEdit1.Size = New System.Drawing.Size(580, 20)
-        Me.LookUpEdit1.StyleController = Me.LayoutControl1
-        Me.LookUpEdit1.TabIndex = 16
+        Me.BackgroundWorker1.WorkerReportsProgress = True
         '
         'NewAssessmentForm
         '
@@ -684,6 +689,7 @@ Partial Class NewAssessmentForm
         CType(Me.LayoutControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.LayoutControl1.ResumeLayout(False)
         CType(Me.ComboBoxEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem6, System.ComponentModel.ISupportInitialize).EndInit()
@@ -693,7 +699,6 @@ Partial Class NewAssessmentForm
         CType(Me.LayoutControlItem3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.LookUpEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

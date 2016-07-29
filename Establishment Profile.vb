@@ -20,7 +20,7 @@
     End Sub
 
     Private Sub Establishment_Detail_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        display1("select * from assessmentlisttable where AssessmentID like '" & EstablishmentIDTextEdit.Text & "' ")
+        display1("select * from assessmentlisttable where EstablishmentID like '" & EstablishmentIDTextEdit.Text & "' ")
 
     End Sub
 
@@ -66,17 +66,15 @@
 
     Private Sub ViewAssessmentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewAssessmentToolStripMenuItem.Click
         Try
-
-
             If ListView1.SelectedItems.Count = 1 Then
                 Dim param1 As String = ListView1.SelectedItems(0).Text
                 Dim dt As New DataTable
-
-
-                AssessmentForm.DataLayoutControl1.DataSource = custable("select * from assessmentlisttable where AssessmentID='" & param1 & "'", dt)
+                AssessmentForm.DataLayoutControl1.DataSource = custable("select * from assessmentlisttable Inner Join establishmenttable on assessmentlisttable.EstablishmentID=establishmenttable.EstablishmentID where AssessmentID='" & param1 & "'", dt)
+                AssessmentForm.SpinEdit2.Properties.DataSource = custable("select * from assessmentlisttable Inner Join establishmenttable on assessmentlisttable.EstablishmentID=establishmenttable.EstablishmentID where AssessmentID='" & param1 & "'", dt)
+                AssessmentForm.SpinEdit2.Properties.DisplayMember = "EstablishmentName"
+                AssessmentForm.SpinEdit2.Properties.ValueMember = "EstablishmentID"
                 AssessmentForm.display1("select * from violationstable where AssessmentID like '" & param1 & "'")
                 AssessmentForm.ShowDialog()
-
             Else
 
             End If
@@ -86,4 +84,71 @@
     End Sub
 
 
+    Private Sub UpdateAssessmentStatusToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UpdateAssessmentStatusToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub WithViolationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WithViolationToolStripMenuItem.Click
+        If ListView1.SelectedItems.Count = 1 Then
+            Dim param1 As String = ListView1.SelectedItems(0).Text
+            sqlcoms("Update assessmentlisttable set AssessmentStatus='WITH VIOLATION' where AssessmentID='" & param1 & "'", True)
+            ListView1.SelectedItems(0).SubItems(6).Text = "WITH VIOLATION"
+        End If
+    End Sub
+
+    Private Sub NoViolationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NoViolationToolStripMenuItem.Click
+        If ListView1.SelectedItems.Count = 1 Then
+            Dim param1 As String = ListView1.SelectedItems(0).Text
+            sqlcoms("Update assessmentlisttable set AssessmentStatus='NO VIOLATION' where AssessmentID='" & param1 & "'", True)
+            ListView1.SelectedItems(0).SubItems(6).Text = "NO VIOLATION"
+        End If
+    End Sub
+
+    Private Sub CompliedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CompliedToolStripMenuItem.Click
+        If ListView1.SelectedItems.Count = 1 Then
+            Dim param1 As String = ListView1.SelectedItems(0).Text
+            sqlcoms("Update assessmentlisttable set AssessmentStatus='COMPLIED' where AssessmentID='" & param1 & "'", True)
+            ListView1.SelectedItems(0).SubItems(6).Text = "COMPLIED"
+        End If
+    End Sub
+
+    Private Sub PrintedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintedToolStripMenuItem.Click
+        If ListView1.SelectedItems.Count = 1 Then
+            Dim param1 As String = ListView1.SelectedItems(0).Text
+            sqlcoms("Update assessmentlisttable set COCStatus='PRINTED' where AssessmentID='" & param1 & "'", True)
+            ListView1.SelectedItems(0).SubItems(7).Text = "PRINTED"
+        End If
+    End Sub
+
+    Private Sub ForIssuanceGLSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForIssuanceGLSToolStripMenuItem.Click
+        If ListView1.SelectedItems.Count = 1 Then
+            Dim param1 As String = ListView1.SelectedItems(0).Text
+            sqlcoms("Update assessmentlisttable set COCStatus='FOR ISSUANCE GLS' where AssessmentID='" & param1 & "'", True)
+            ListView1.SelectedItems(0).SubItems(7).Text = "FOR ISSUANCE GLS"
+        End If
+    End Sub
+
+    Private Sub ForIssuanceOSHSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForIssuanceOSHSToolStripMenuItem.Click
+        If ListView1.SelectedItems.Count = 1 Then
+            Dim param1 As String = ListView1.SelectedItems(0).Text
+            sqlcoms("Update assessmentlisttable set COCStatus='FOR ISSUANCE OSHS' where AssessmentID='" & param1 & "'", True)
+            ListView1.SelectedItems(0).SubItems(7).Text = "FOR ISSUANCE OSHS"
+        End If
+    End Sub
+
+    Private Sub ForIssuanceGLSAndOSHSToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForIssuanceGLSAndOSHSToolStripMenuItem.Click
+        If ListView1.SelectedItems.Count = 1 Then
+            Dim param1 As String = ListView1.SelectedItems(0).Text
+            sqlcoms("Update assessmentlisttable set COCStatus='FOR ISSUANCE GLS AND OSHS' where AssessmentID='" & param1 & "'", True)
+            ListView1.SelectedItems(0).SubItems(7).Text = "FOR ISSUANCE GLS AND OSHS"
+        End If
+    End Sub
+
+    Private Sub IssuedToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles IssuedToolStripMenuItem.Click
+        If ListView1.SelectedItems.Count = 1 Then
+            Dim param1 As String = ListView1.SelectedItems(0).Text
+            sqlcoms("Update assessmentlisttable set COCStatus='ISSUED' where AssessmentID='" & param1 & "'", True)
+            ListView1.SelectedItems(0).SubItems(7).Text = "ISSUED"
+        End If
+    End Sub
 End Class

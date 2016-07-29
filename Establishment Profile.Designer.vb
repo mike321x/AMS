@@ -62,6 +62,16 @@ Partial Class Establishment_Detail
         Me.ItemForNoOfFemaleWorkers = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem2 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.UpdateAssessmentStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateCOCStatusToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NoViolationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WithViolationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CompliedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PrintedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForIssuanceGLSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForIssuanceOSHSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ForIssuanceGLSAndOSHSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IssuedToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.DbdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EstablishmenttableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataLayoutControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -199,14 +209,14 @@ Partial Class Establishment_Detail
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewAssessmentToolStripMenuItem})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViewAssessmentToolStripMenuItem, Me.UpdateAssessmentStatusToolStripMenuItem, Me.UpdateCOCStatusToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(165, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(213, 92)
         '
         'ViewAssessmentToolStripMenuItem
         '
         Me.ViewAssessmentToolStripMenuItem.Name = "ViewAssessmentToolStripMenuItem"
-        Me.ViewAssessmentToolStripMenuItem.Size = New System.Drawing.Size(164, 22)
+        Me.ViewAssessmentToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
         Me.ViewAssessmentToolStripMenuItem.Text = "View Assessment"
         '
         'EstablishmentIDTextEdit
@@ -462,6 +472,68 @@ Partial Class Establishment_Detail
         Me.LayoutControlItem2.TextToControlDistance = 0
         Me.LayoutControlItem2.TextVisible = False
         '
+        'UpdateAssessmentStatusToolStripMenuItem
+        '
+        Me.UpdateAssessmentStatusToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NoViolationToolStripMenuItem, Me.WithViolationToolStripMenuItem, Me.CompliedToolStripMenuItem})
+        Me.UpdateAssessmentStatusToolStripMenuItem.Name = "UpdateAssessmentStatusToolStripMenuItem"
+        Me.UpdateAssessmentStatusToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.UpdateAssessmentStatusToolStripMenuItem.Text = "Update Assessment Status"
+        '
+        'UpdateCOCStatusToolStripMenuItem
+        '
+        Me.UpdateCOCStatusToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PrintedToolStripMenuItem, Me.ForIssuanceGLSToolStripMenuItem, Me.ForIssuanceOSHSToolStripMenuItem, Me.ForIssuanceGLSAndOSHSToolStripMenuItem, Me.IssuedToolStripMenuItem})
+        Me.UpdateCOCStatusToolStripMenuItem.Name = "UpdateCOCStatusToolStripMenuItem"
+        Me.UpdateCOCStatusToolStripMenuItem.Size = New System.Drawing.Size(212, 22)
+        Me.UpdateCOCStatusToolStripMenuItem.Text = "Update COC Status"
+        '
+        'NoViolationToolStripMenuItem
+        '
+        Me.NoViolationToolStripMenuItem.Name = "NoViolationToolStripMenuItem"
+        Me.NoViolationToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NoViolationToolStripMenuItem.Text = "No Violation"
+        '
+        'WithViolationToolStripMenuItem
+        '
+        Me.WithViolationToolStripMenuItem.Name = "WithViolationToolStripMenuItem"
+        Me.WithViolationToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.WithViolationToolStripMenuItem.Text = "With Violation"
+        '
+        'CompliedToolStripMenuItem
+        '
+        Me.CompliedToolStripMenuItem.Name = "CompliedToolStripMenuItem"
+        Me.CompliedToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CompliedToolStripMenuItem.Text = "Complied"
+        '
+        'PrintedToolStripMenuItem
+        '
+        Me.PrintedToolStripMenuItem.Name = "PrintedToolStripMenuItem"
+        Me.PrintedToolStripMenuItem.Size = New System.Drawing.Size(218, 22)
+        Me.PrintedToolStripMenuItem.Text = "Printed"
+        '
+        'ForIssuanceGLSToolStripMenuItem
+        '
+        Me.ForIssuanceGLSToolStripMenuItem.Name = "ForIssuanceGLSToolStripMenuItem"
+        Me.ForIssuanceGLSToolStripMenuItem.Size = New System.Drawing.Size(218, 22)
+        Me.ForIssuanceGLSToolStripMenuItem.Text = "For Issuance GLS"
+        '
+        'ForIssuanceOSHSToolStripMenuItem
+        '
+        Me.ForIssuanceOSHSToolStripMenuItem.Name = "ForIssuanceOSHSToolStripMenuItem"
+        Me.ForIssuanceOSHSToolStripMenuItem.Size = New System.Drawing.Size(218, 22)
+        Me.ForIssuanceOSHSToolStripMenuItem.Text = "For Issuance OSHS"
+        '
+        'ForIssuanceGLSAndOSHSToolStripMenuItem
+        '
+        Me.ForIssuanceGLSAndOSHSToolStripMenuItem.Name = "ForIssuanceGLSAndOSHSToolStripMenuItem"
+        Me.ForIssuanceGLSAndOSHSToolStripMenuItem.Size = New System.Drawing.Size(218, 22)
+        Me.ForIssuanceGLSAndOSHSToolStripMenuItem.Text = "For Issuance GLS and OSHS"
+        '
+        'IssuedToolStripMenuItem
+        '
+        Me.IssuedToolStripMenuItem.Name = "IssuedToolStripMenuItem"
+        Me.IssuedToolStripMenuItem.Size = New System.Drawing.Size(218, 22)
+        Me.IssuedToolStripMenuItem.Text = "Issued"
+        '
         'Establishment_Detail
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -544,4 +616,14 @@ Partial Class Establishment_Detail
     Friend WithEvents LayoutControlItem2 As DevExpress.XtraLayout.LayoutControlItem
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents ViewAssessmentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UpdateAssessmentStatusToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents UpdateCOCStatusToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents NoViolationToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents WithViolationToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CompliedToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PrintedToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ForIssuanceGLSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ForIssuanceOSHSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ForIssuanceGLSAndOSHSToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents IssuedToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

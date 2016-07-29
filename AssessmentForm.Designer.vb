@@ -70,7 +70,6 @@ Partial Class AssessmentForm
         Me.TextEdit9 = New DevExpress.XtraEditors.TextEdit()
         Me.TextEdit8 = New DevExpress.XtraEditors.MemoEdit()
         Me.SpinEdit1 = New DevExpress.XtraEditors.TextEdit()
-        Me.SpinEdit2 = New DevExpress.XtraEditors.TextEdit()
         Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlGroup2 = New DevExpress.XtraLayout.LayoutControlGroup()
         Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
@@ -85,6 +84,7 @@ Partial Class AssessmentForm
         Me.LayoutControlItem11 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem12 = New DevExpress.XtraLayout.LayoutControlItem()
         Me.LayoutControlItem13 = New DevExpress.XtraLayout.LayoutControlItem()
+        Me.SpinEdit2 = New DevExpress.XtraEditors.LookUpEdit()
         CType(Me.DbdbDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.AssessmentlisttableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EstablishmenttableBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -130,7 +130,6 @@ Partial Class AssessmentForm
         CType(Me.TextEdit9.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEdit8.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SpinEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SpinEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -145,6 +144,7 @@ Partial Class AssessmentForm
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SpinEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DbdbDataSet
@@ -590,16 +590,6 @@ Partial Class AssessmentForm
         Me.SpinEdit1.StyleController = Me.DataLayoutControl1
         Me.SpinEdit1.TabIndex = 4
         '
-        'SpinEdit2
-        '
-        Me.SpinEdit2.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AssessmentlisttableBindingSource, "EstablishmentID", True))
-        Me.SpinEdit2.Location = New System.Drawing.Point(160, 36)
-        Me.SpinEdit2.Name = "SpinEdit2"
-        Me.SpinEdit2.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered
-        Me.SpinEdit2.Size = New System.Drawing.Size(662, 20)
-        Me.SpinEdit2.StyleController = Me.DataLayoutControl1
-        Me.SpinEdit2.TabIndex = 5
-        '
         'LayoutControlGroup1
         '
         Me.LayoutControlGroup1.CustomizationFormText = "LayoutControlGroup1"
@@ -640,7 +630,7 @@ Partial Class AssessmentForm
         Me.ItemForEstablishmentID.Location = New System.Drawing.Point(0, 24)
         Me.ItemForEstablishmentID.Name = "ItemForEstablishmentID"
         Me.ItemForEstablishmentID.Size = New System.Drawing.Size(814, 24)
-        Me.ItemForEstablishmentID.Text = "Establishment ID"
+        Me.ItemForEstablishmentID.Text = "Establishment Name"
         Me.ItemForEstablishmentID.TextSize = New System.Drawing.Size(145, 13)
         '
         'LayoutControlItem2
@@ -746,6 +736,18 @@ Partial Class AssessmentForm
         Me.LayoutControlItem13.TextToControlDistance = 0
         Me.LayoutControlItem13.TextVisible = False
         '
+        'SpinEdit2
+        '
+        Me.SpinEdit2.DataBindings.Add(New System.Windows.Forms.Binding("EditValue", Me.AssessmentlisttableBindingSource, "EstablishmentID", True))
+        Me.SpinEdit2.Location = New System.Drawing.Point(160, 36)
+        Me.SpinEdit2.Name = "SpinEdit2"
+        Me.SpinEdit2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.SpinEdit2.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Buffered
+        Me.SpinEdit2.Properties.NullText = ""
+        Me.SpinEdit2.Size = New System.Drawing.Size(662, 20)
+        Me.SpinEdit2.StyleController = Me.DataLayoutControl1
+        Me.SpinEdit2.TabIndex = 5
+        '
         'AssessmentForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -799,7 +801,6 @@ Partial Class AssessmentForm
         CType(Me.TextEdit9.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TextEdit8.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SpinEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SpinEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlGroup2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -814,6 +815,7 @@ Partial Class AssessmentForm
         CType(Me.LayoutControlItem11, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem12, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.LayoutControlItem13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SpinEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
 End Sub
@@ -877,8 +879,8 @@ End Sub
     Friend WithEvents ColumnHeader2 As System.Windows.Forms.ColumnHeader
     Friend WithEvents ColumnHeader3 As System.Windows.Forms.ColumnHeader
     Friend WithEvents SpinEdit1 As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents SpinEdit2 As DevExpress.XtraEditors.TextEdit
     Friend WithEvents ColumnHeader4 As System.Windows.Forms.ColumnHeader
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents LayoutControlItem15 As DevExpress.XtraLayout.LayoutControlItem
+    Friend WithEvents SpinEdit2 As DevExpress.XtraEditors.LookUpEdit
 End Class
