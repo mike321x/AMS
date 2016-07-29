@@ -23,6 +23,7 @@ Partial Class DashboardView
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DashboardView))
         Me.DashboardViewer1 = New DevExpress.DashboardWin.DashboardViewer(Me.components)
         Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         CType(Me.DashboardViewer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -39,12 +40,18 @@ Partial Class DashboardView
         '
         'SimpleButton1
         '
+        Me.SimpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Flat
         Me.SimpleButton1.Image = CType(resources.GetObject("SimpleButton1.Image"), System.Drawing.Image)
         Me.SimpleButton1.Location = New System.Drawing.Point(0, 0)
         Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(114, 29)
+        Me.SimpleButton1.Size = New System.Drawing.Size(114, 39)
         Me.SimpleButton1.TabIndex = 1
         Me.SimpleButton1.Text = "Refresh Data"
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 300000
         '
         'DashboardView
         '
@@ -62,4 +69,5 @@ Partial Class DashboardView
     End Sub
     Friend WithEvents DashboardViewer1 As DevExpress.DashboardWin.DashboardViewer
     Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents Timer1 As System.Windows.Forms.Timer
 End Class

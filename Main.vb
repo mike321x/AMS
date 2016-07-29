@@ -17,7 +17,8 @@ Public Class Main
     Sub InitSkins()
         DevExpress.Skins.SkinManager.EnableFormSkins()
         DevExpress.UserSkins.BonusSkins.Register()
-        UserLookAndFeel.Default.SetSkinStyle("DevExpress Style")
+        UserLookAndFeel.Default.SetSkinStyle(My.Settings.SkinSetting)
+
     End Sub
     Private Sub InitSkinGallery()
         SkinHelper.InitSkinGallery(rgbiSkins, True)
@@ -25,6 +26,8 @@ Public Class Main
 
 
     Private Sub Main_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+        My.Settings.SkinSetting = UserLookAndFeel.Default.ActiveSkinName
+        My.Settings.Save()
         Process.GetCurrentProcess.Kill()
     End Sub
 

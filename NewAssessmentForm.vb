@@ -28,7 +28,7 @@
 
         loadtable2("select * from assessmentlisttable")
         Dim idnum As Integer = Globals.table2.Rows.Count + 1
-        sqlcoms("insert into assessmentlisttable(AssessmentID, EstablishmentID, AssessmentTypeVisit, AssessmentStatus, AssessmentDate, AssessmentAuthorityNumber, AssessmentProvince, AssessmentCategory, COCStatus, `AssessmentFindings/Remarks`, AssessmentLLCO ) Values('" & idnum & "', '" & EstablishmentIDLookUpEdit.EditValue & "', '" & AssessmentTypeVisitComboBoxEdit.Text & "', '" & AssessmentStatusComboBoxEdit.Text & "', '" & AssessmentDateDateEdit.Text & "', '" & AssessmentAuthorityNumberTextEdit.Text & "', '" & AssessmentProvinceComboBoxEdit.Text & "', '" & AssessmentCategoryComboBoxEdit.Text & "', '" & COCStatusComboBoxEdit.Text & "', '" & MemoEdit1.Text & "', '" & Globals.LLCONAME & "')", False)
+        sqlcoms("insert into assessmentlisttable(AssessmentID, EstablishmentID, AssessmentTypeVisit, AssessmentStatus, AssessmentDate, AssessmentAuthorityNumber, AssessmentProvince, AssessmentCategory, COCStatus, `AssessmentFindings/Remarks`, AssessmentLLCO ) Values('" & idnum & "', '" & EstablishmentIDLookUpEdit.EditValue & "', '" & AssessmentTypeVisitComboBoxEdit.Text & "', '" & AssessmentStatusComboBoxEdit.Text & "', '" & AssessmentDateDateEdit.Text & "', '" & AssessmentAuthorityNumberTextEdit.Text & "', '" & AssessmentProvinceComboBoxEdit.Text & "', '" & AssessmentCategoryComboBoxEdit.Text & "', '" & COCStatusComboBoxEdit.Text & "', '" & MemoEdit1.Text & "', '" & txtAssessedby.Text & "')", False)
         loadtable2("select * from assessmentlisttable where AssessmentID='" & idnum & "'")
         If ListView1.Items.Count > 0 Then
             If Globals.table2.Rows.Count = 1 Then
@@ -88,4 +88,7 @@
     End Sub
 
   
+    Private Sub txtAssessedby_TextChanged(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

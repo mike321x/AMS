@@ -216,6 +216,7 @@ Partial Class XtraForm1
         Me.EstablishmentTypeComboBoxEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.EstablishmentTypeComboBoxEdit.Name = "EstablishmentTypeComboBoxEdit"
         Me.EstablishmentTypeComboBoxEdit.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.EstablishmentTypeComboBoxEdit.Properties.Items.AddRange(New Object() {"CONSTRUCTION", "SECURITY AGENCY", "JANITORIAL AGENCY", "OTHER SERVICE PROVIDER"})
         Me.EstablishmentTypeComboBoxEdit.Size = New System.Drawing.Size(97, 20)
         Me.EstablishmentTypeComboBoxEdit.StyleController = Me.DataLayoutControl1
         Me.EstablishmentTypeComboBoxEdit.TabIndex = 11

@@ -63,6 +63,18 @@ Namespace My
                 Return CType(Me("dbdbConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("DevExpress Style")>  _
+        Public Property SkinSetting() As String
+            Get
+                Return CType(Me("SkinSetting"),String)
+            End Get
+            Set
+                Me("SkinSetting") = value
+            End Set
+        End Property
     End Class
 End Namespace
 
